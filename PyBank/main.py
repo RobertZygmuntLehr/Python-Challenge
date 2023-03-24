@@ -59,7 +59,7 @@ print("Financial Analysis",
 "\nGreatest Increase in Profits:", greatest_Increase_profits, # currently returns the second to last value of the list <data>
 "\nGreatest Decrease in Profits:", greatest_Decrease_profits) # currently returns the last value of the list <data>
 
-# Printing the results to a text file stored in the "analysis" subdirectory
+# Printing the results to a text file stored in the "Analysis" subdirectory
 with open("analysis/Financial Analysis.txt", "w") as file:
     # Write a list of strings to the file
     lines = ["Financial Analysis",

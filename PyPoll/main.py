@@ -6,10 +6,13 @@ import math
 # Clear the console/terminal window
 os.system('clear')
 
-# Declare/Instantiate/Initialize necessary global scope variables
+
+# Assign values to variables
 csv_path = "Resources/election_data.csv"
-greatest_Increase_profits = 0
-greatest_Decrease_profits = 0
+vote_counter_Charles = 0 # Used to calculate the percentage of votes Charles won
+vote_counter_Diana = 0 # Used to calculate the percentage of votes Diana won
+vote_counter_Raymon = 0 # Used to calculate the percentage of votes Anthony won
+winner = None
 
 # Exception handling for when the file is not found.
 if not os.path.exists(csv_path):
@@ -19,49 +22,65 @@ if not os.path.exists(csv_path):
 # Finds the file and performs operations with it.
 with open(csv_path, "r") as csv_read:
     reader = csv.reader(csv_read, delimiter = ",")
-    # next(reader) # skips the first row of the <reader> CSV file
-    # print(next(reader))
+    next(reader) # skips the first row of the <reader> CSV file
+    election_votes_list = list(reader) # Stores the <reader> file without a header as a list datatype.
 
-    list_reader = list(reader) # Stores the <reader> file without a header as a list datatype.
+# Figure out how to check if each voter ID is unique.
 
-    election_data_size = len(list_reader)
-    print(election_data_size)
+    # START DEBUGGING
+    test = election_votes_list[167678][2]
+    print(test)
+    # END DEBUGGING
+
+    # Returns the total number of votes cast.
+    total_number_of_votes_cast = len(election_votes_list)
+
+    # Returns a complete list of candidates who received votes.
+    list_of_candidates = list(set([poll_data_list[2] for poll_data_list in election_votes_list]))
+
+    # The percentage of votes each candidate won
+    for vote in election_votes_list:
+        # print(vote[2])
+        if vote[2] == "Charles Casper Stockham":
+            vote_counter_Charles = vote_counter_Charles + 1
+        elif vote[2] == "Diana DeGette":
+            vote_counter_Diana = vote_counter_Diana + 1
+        elif vote[2] == "Raymon Anthony Doane":
+            vote_counter_Raymon = vote_counter_Raymon + 1
+        else:
+            print("You didn't vote for any of the candidates!")
+
+    # The winner of the election base on popular vote is:
+    if vote_counter_Charles > vote_counter_Diana and vote_counter_Charles > vote_counter_Raymon:
+        winner = "Charles Casper Stockham"
+    elif vote_counter_Diana > vote_counter_Charles and vote_counter_Diana > vote_counter_Raymon:
+        winner = "Diana DeGette"
+    else:
+        winner = "Raymon Anthony Doane"
+
+print("\nElection Results",
+      "\n-------------------------",
+      "\nTotal Votes: ", total_number_of_votes_cast,
+      "\n-------------------------",
+      "\nCharles Casper Stockham: ", str(math.floor(vote_counter_Charles/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Charles) + ")",
+      "\nDiana DeGette: 73.812% (272892)", str(math.floor(vote_counter_Diana/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Diana) + ")"
+      "\nRaymon Anthony Doane: 3.139% (11606)", str(math.floor(vote_counter_Raymon/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Raymon) + ")"
+      "\n-------------------------",
+      "\nWinner:", winner,
+      "\n-------------------------")
+
+# Printing the results to a text file stored in the "Analysis" subdirectory
+with open("analysis/Election Results.txt", "w") as file:
+    # Write a list of strings to the file
+    lines = ["\nElection Results",
+            "\n-------------------------",
+            "\nTotal Votes: ", str(total_number_of_votes_cast),
+            "\n-------------------------",
+            "\nCharles Casper Stockham: ", str(math.floor(vote_counter_Charles/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Charles) + ")",
+            "\nDiana DeGette: 73.812% (272892)", str(math.floor(vote_counter_Diana/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Diana) + ")"
+            "\nRaymon Anthony Doane: 3.139% (11606)", str(math.floor(vote_counter_Raymon/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Raymon) + ")"
+            "\n-------------------------",
+            "\nWinner:", winner,
+            "\n-------------------------"]
     
-    # print(list_reader)
-'''
-# Converting the string values in the [value] column to integers and storing in the new <data> list.
-data = [[month, int(value)] for month, value in list_reader]
-
-# Debugging
-print(data,"\n") # Datatype = <class 'list'>
-
-# Calculating the profits and losses for ecah month
-profit_losses = [data[row][1] for row in range(len(data))]
-
-# Calculating the net total amount of "Profit/Losses" over the entire budget_data.csv data
-total_profit_losses = sum(profit_losses)
-
-# Calculating the change in profits and losses for between months
-change_in_profit_losses = [data[row+1][1] - data[row][1] for row in range(len(data)-1)]
-
-# Calculating the average of those changes
-average_profit_losses = sum(change_in_profit_losses) / len(change_in_profit_losses)
-rounded_average_profit_losses = math.floor(average_profit_losses*100)/100
-
-# Calculating the Greatest Increase and Greatest Decrease in Profits over the entire period.
-for row in range(len(data)):
-    print(data[row][1])
-    if data[row][1] > data[row - 1][1]:
-        greatest_Increase_profits = data[row][1]
-    if data[row][1] < data[row - 1][1]:
-        greatest_Decrease_profits = data[row][1]
-
-# Final Printed output:
-print("Financial Analysis",
-"\n----------------------------",
-"\nTotal months:", str(total_num_months),
-"\nTotal: $", total_profit_losses,
-"\nAverage Change:", rounded_average_profit_losses,
-"\nGreatest Increase in Profits:", greatest_Increase_profits, # currently returns the second to last value of the list <data>
-"\nGreatest Decrease in Proftis:", greatest_Decrease_profits) # currently returns the last value of the list <data>
-'''
+    file.writelines(lines)
