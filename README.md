@@ -5,7 +5,7 @@ Bootcamp: UTA-VIRT-DATA-PT-02-2023-U-LOLC-MWTH(B) Challenge 3
 
 ### FILES LOCATION
 
-1. Python files are located in the \[PyBank\] and \[PuPoll\] folders.
+1. Python files are located in the \[PyBank\] and \[PyPoll\] folders.
 
     # PyBank
     This script analyzes the financial records of a company by analyzing the data from budget_data.csv, available in /PyBank/Resources/budget_data.csv, returning the following values:
