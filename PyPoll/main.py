@@ -19,12 +19,16 @@ if not os.path.exists(csv_path):
 # Finds the file and performs operations with it.
 with open(csv_path, "r") as csv_read:
     reader = csv.reader(csv_read, delimiter = ",")
-    next(reader) # skips the first row of the <reader> CSV file
+    # next(reader) # skips the first row of the <reader> CSV file
+    # print(next(reader))
 
     list_reader = list(reader) # Stores the <reader> file without a header as a list datatype.
 
-    total_num_months = len(list_reader)
-
+    election_data_size = len(list_reader)
+    print(election_data_size)
+    
+    # print(list_reader)
+'''
 # Converting the string values in the [value] column to integers and storing in the new <data> list.
 data = [[month, int(value)] for month, value in list_reader]
 
@@ -60,3 +64,4 @@ print("Financial Analysis",
 "\nAverage Change:", rounded_average_profit_losses,
 "\nGreatest Increase in Profits:", greatest_Increase_profits, # currently returns the second to last value of the list <data>
 "\nGreatest Decrease in Proftis:", greatest_Decrease_profits) # currently returns the last value of the list <data>
+'''

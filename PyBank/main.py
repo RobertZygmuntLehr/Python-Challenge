@@ -23,7 +23,7 @@ with open(csv_path, "r") as csv_read:
 
     list_reader = list(reader) # Stores the <reader> file without a header as a list datatype.
 
-    total_num_months = len(list_reader)
+    total_num_months = len(list_reader) # Calculates the number of months in the csv file, <budget_data.csv>.
 
 # Converting the string values in the [value] column to integers and storing in the new <data> list.
 data = [[month, int(value)] for month, value in list_reader] # Datatype = <class 'list'>
