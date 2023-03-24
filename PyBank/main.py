@@ -51,7 +51,7 @@ for month_data in data:
         greatest_Decrease_profits = month_data[1]
 
 # Final Printed output:
-print("Financial Analysis",
+print("Financial_Analysis",
 "\n----------------------------",
 "\nTotal months:", str(total_num_months),
 "\nTotal: $", total_profit_losses,

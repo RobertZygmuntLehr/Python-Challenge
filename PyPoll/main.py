@@ -70,7 +70,7 @@ print("\nElection Results",
       "\n-------------------------")
 
 # Printing the results to a text file stored in the "Analysis" subdirectory
-with open("analysis/Election Results.txt", "w") as file:
+with open("analysis/Election_Results.txt", "w") as file:
     # Write a list of strings to the file
     lines = ["\nElection Results",
             "\n-------------------------",

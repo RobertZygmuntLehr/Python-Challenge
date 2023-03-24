@@ -15,7 +15,7 @@ Bootcamp: UTA-VIRT-DATA-PT-02-2023-U-LOLC-MWTH(B) Challenge 3
     4. The greatest increase in profits (date and amount) over the entire period
     5. The greatest decrease in profits (date and amount) over the entire period
 
-    displayed on Terminal and written to a text file, available in PyBank/Analysis/Financial_Analysis.txt.
+    displayed on Terminal and written to a text file, available in /PyBank/Analysis/Financial_Analysis.txt.
 
 
     # PyPoll
@@ -25,6 +25,8 @@ Bootcamp: UTA-VIRT-DATA-PT-02-2023-U-LOLC-MWTH(B) Challenge 3
     3. The percentage of votes each candidate won
     4. The total number of votes each candidate won
     5. The winner of the election based on popular votes
+
+    displayed on Terminal and written to a text file, available in /PyPoll/Election_Results.txt.
     
     # CSV files located in the \[Resources\] folders.
 
