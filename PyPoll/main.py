@@ -40,7 +40,7 @@ with open(csv_path, "r") as csv_read:
 
     # The percentage of votes each candidate won
     for vote in election_votes_list:
-        # print(vote[2])
+
         if vote[2] == "Charles Casper Stockham":
             vote_counter_Charles = vote_counter_Charles + 1
         elif vote[2] == "Diana DeGette":
