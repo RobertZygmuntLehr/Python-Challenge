@@ -21,7 +21,7 @@ if not os.path.exists(csv_path):
 
 # Finds the file and performs operations with it.
 with open(csv_path, "r") as csv_read:
-    reader = csv.reader(csv_read, delimiter = ",")
+    reader = csv.reader(csv_read, delimiter = ",") # reader is a csv file type.
     next(reader) # skips the first row of the <reader> CSV file
     election_votes_list = list(reader) # Stores the <reader> file without a header as a list datatype.
 
@@ -62,9 +62,9 @@ print("\nElection Results",
       "\n--------------------------",
       "\nTotal Votes: ", total_number_of_votes_cast,
       "\n--------------------------",
-      "\nCharles Casper Stockham: ", str(math.floor(vote_counter_Charles/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Charles) + ")",
-      "\nDiana DeGette: 73.812% (272892)", str(math.floor(vote_counter_Diana/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Diana) + ")"
-      "\nRaymon Anthony Doane: 3.139% (11606)", str(math.floor(vote_counter_Raymon/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Raymon) + ")"
+      "\nCharles Casper Stockham: ", str(math.floor(vote_counter_Charles/total_number_of_votes_cast*100000)/1000) + "% (" + str(vote_counter_Charles) + ")",
+      "\nDiana DeGette: ", str(math.floor(vote_counter_Diana/total_number_of_votes_cast*100000)/1000) + "% (" + str(vote_counter_Diana) + ")"
+      "\nRaymon Anthony Doane: ", str(math.floor(vote_counter_Raymon/total_number_of_votes_cast*100000)/1000) + "% (" + str(vote_counter_Raymon) + ")"
       "\n--------------------------",
       "\nWinner:", winner,
       "\n--------------------------")
@@ -76,9 +76,9 @@ with open("analysis/Election_Results.txt", "w") as file:
             "\n--------------------------",
             "\nTotal Votes: ", str(total_number_of_votes_cast),
             "\n--------------------------",
-            "\nCharles Casper Stockham: ", str(math.floor(vote_counter_Charles/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Charles) + ")",
-            "\nDiana DeGette: 73.812% (272892)", str(math.floor(vote_counter_Diana/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Diana) + ")"
-            "\nRaymon Anthony Doane: 3.139% (11606)", str(math.floor(vote_counter_Raymon/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Raymon) + ")"
+            "\nCharles Casper Stockham: ", str(math.floor(vote_counter_Charles/total_number_of_votes_cast*100000)/1000) + "% (" + str(vote_counter_Charles) + ")",
+            "\nDiana DeGette: ", str(math.floor(vote_counter_Diana/total_number_of_votes_cast*100000)/1000) + "% (" + str(vote_counter_Diana) + ")"
+            "\nRaymon Anthony Doane: ", str(math.floor(vote_counter_Raymon/total_number_of_votes_cast*100000)/1000) + "% (" + str(vote_counter_Raymon) + ")"
             "\n--------------------------",
             "\nWinner:", winner,
             "\n--------------------------"]
