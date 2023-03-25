@@ -52,7 +52,7 @@ for month_data in data:
 
 # Final Printed output:
 print("Financial_Analysis",
-"\n----------------------------",
+"\n-----------------------------",
 "\nTotal months:", str(total_num_months),
 "\nTotal: $", total_profit_losses,
 "\nAverage Change:", rounded_average_profit_losses,
@@ -63,7 +63,7 @@ print("Financial_Analysis",
 with open("analysis/Financial_Analysis.txt", "w") as file:
     # Write a list of strings to the file
     lines = ["Financial Analysis",
-            "\n----------------------------",
+            "\n-----------------------------",
             "\nTotal months: ", str(total_num_months),
             "\nTotal: $", str(total_profit_losses),
             "\nAverage Change: ", str(rounded_average_profit_losses),

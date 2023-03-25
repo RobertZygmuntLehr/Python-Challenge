@@ -59,28 +59,28 @@ with open(csv_path, "r") as csv_read:
         winner = "Raymon Anthony Doane"
 
 print("\nElection Results",
-      "\n-------------------------",
+      "\n--------------------------",
       "\nTotal Votes: ", total_number_of_votes_cast,
-      "\n-------------------------",
+      "\n--------------------------",
       "\nCharles Casper Stockham: ", str(math.floor(vote_counter_Charles/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Charles) + ")",
       "\nDiana DeGette: 73.812% (272892)", str(math.floor(vote_counter_Diana/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Diana) + ")"
       "\nRaymon Anthony Doane: 3.139% (11606)", str(math.floor(vote_counter_Raymon/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Raymon) + ")"
-      "\n-------------------------",
+      "\n--------------------------",
       "\nWinner:", winner,
-      "\n-------------------------")
+      "\n--------------------------")
 
 # Printing the results to a text file stored in the "Analysis" subdirectory
 with open("analysis/Election_Results.txt", "w") as file:
     # Write a list of strings to the file
     lines = ["\nElection Results",
-            "\n-------------------------",
+            "\n--------------------------",
             "\nTotal Votes: ", str(total_number_of_votes_cast),
-            "\n-------------------------",
+            "\n--------------------------",
             "\nCharles Casper Stockham: ", str(math.floor(vote_counter_Charles/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Charles) + ")",
             "\nDiana DeGette: 73.812% (272892)", str(math.floor(vote_counter_Diana/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Diana) + ")"
             "\nRaymon Anthony Doane: 3.139% (11606)", str(math.floor(vote_counter_Raymon/total_number_of_votes_cast*100000)/1000), "% (" + str(vote_counter_Raymon) + ")"
-            "\n-------------------------",
+            "\n--------------------------",
             "\nWinner:", winner,
-            "\n-------------------------"]
+            "\n--------------------------"]
     
     file.writelines(lines)
