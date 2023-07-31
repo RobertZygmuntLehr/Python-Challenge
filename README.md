@@ -1,37 +1,48 @@
-# Python-Challenge
-Bootcamp: UTA-VIRT-DATA-PT-02-2023-U-LOLC-MWTH(B) Challenge 3
+# Financial Records Analysis
 
-# Python Homework: PyBank and PyPoll
+## Overview
 
-### FILES LOCATION
+This project aims to perform financial records analysis and election poll data processing using Python scripts. The two scripts here, [PyBank](https://github.com/robert-z-lehr/Financial-Records-Analysis/tree/main/PyBank/main.py) and [PyPoll](https://github.com/robert-z-lehr/Financial-Records-Analysis/blob/main/PyPoll/main.py), are designed to analyze and extract essential information from large datasets with Python.
 
-1. Python files are located in the \[PyBank\] and \[PyPoll\] folders.
+## Tools and Skills Used
 
-    # PyBank
-    This script analyzes the financial records of a company by analyzing the data from budget_data.csv, available in /PyBank/Resources/budget_data.csv, returning the following values:
-    1. The total number of months included in the dataset
-    2. The net total amount of "Profit/Losses" over the entire period
-    3. The changes in "Profit/Losses" over the entire period, and then the average of those changes
-    4. The greatest increase in profits (date and amount) over the entire period
-    5. The greatest decrease in profits (date and amount) over the entire period
+- Python
+- Pandas
+- Reading and writing CSV files
+- Data analysis and manipulation
+- Conditional statements and loops
 
-    displayed on Terminal and written to a text file, available in /PyBank/Analysis/Financial_Analysis.txt.
+## Project Description
 
+### PyBank
 
-    # PyPoll
-    The script helps a small, rural town modernize its vote-counting process by analyzing the data from election_data.csv, available in /PyPoll/Resources/election_data.csv, returning the following values:
-    1. The total number of votes cast
-    2. A complete list of candidates who received votes
-    3. The percentage of votes each candidate won
-    4. The total number of votes each candidate won
-    5. The winner of the election based on popular votes
+This script analyzes the financial records of a company by analyzing the data from `budget_data.csv`, available in [`/PyBank/Resources/budget_data.csv`](https://github.com/robert-z-lehr/Financial-Records-Analysis/blob/main/PyBank/Resources/budget_data.csv), displaying results on Terminal and written to a text file, available in [`/PyBank/Analysis/Financial_Analysis.txt`](https://github.com/robert-z-lehr/Financial-Records-Analysis/blob/main/PyBank/Analysis/Financial_Analysis.txt).
 
-    displayed on Terminal and written to a text file, available in /PyPoll/Election_Results.txt.
-    
-    # CSV files located in the \[Resources\] folders.
+### PyPoll
 
-    #  Output files are located in the \[Analysis\] folders.
+The script helps a small, rural town modernize its vote-counting process by analyzing the data from `election_data.csv`, available in [`/PyPoll/Resources/election_data.csv`](https://raw.githubusercontent.com/robert-z-lehr/Financial-Records-Analysis/main/PyPoll/Resources/election_data.csv), displaying the results on Terminal and written to a text file, available in [`/PyPoll/Analysis/Election_Results.txt`](https://github.com/robert-z-lehr/Financial-Records-Analysis/blob/main/PyPoll/Analysis/Election_Results.txt).
 
----
+## Output Results
 
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+**PyBank Results:**
+
+Financial Analysis
+----------------------------
+Total Months: 86
+Total: $22564198
+Average Change: $-8311.11
+Greatest Increase in Profits: Aug-16 ($1862002)
+Greatest Decrease in Profits: Feb-14 ($-1825558)
+
+**PyPoll Results:**
+
+Election Results
+-------------------------
+Total Votes: 369711
+-------------------------
+Charles Casper Stockham: 23.049% (85213)
+Diana DeGette: 73.812% (272892)
+Raymon Anthony Doane: 3.139% (11606)
+-------------------------
+Winner: Diana DeGette
+-------------------------
