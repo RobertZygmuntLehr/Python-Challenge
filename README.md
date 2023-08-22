@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project aims to perform financial records analysis and election poll data processing using Python scripts. The two scripts here, [PyBank](https://github.com/robert-z-lehr/Financial-Records-Analysis/tree/main/PyBank/main.py) and [PyPoll](https://github.com/robert-z-lehr/Financial-Records-Analysis/blob/main/PyPoll/main.py), are designed to analyze and extract essential information from large datasets with Python.
+This project aims to perform financial records analysis and election poll data processing using Python scripts. The two scripts here, [PyBank](https://github.com/robert-z-lehr/Financial-Records-Analysis/tree/main/script)) and [PyPoll](https://github.com/robert-z-lehr/Financial-Records-Analysis/blob/main/PyPoll/main.py)](https://github.com/robert-z-lehr/Financial-Records-Analysis/tree/main/script), are designed to analyze and extract essential information from large datasets with Python.
 
 ## Tools and Skills Used
 
