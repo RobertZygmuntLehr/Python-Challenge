@@ -8,7 +8,7 @@ os.system('clear')
 
 
 # Assign values to variables
-csv_path = "Resources/election_data.csv"
+csv_path = "../data/election_data.csv"
 vote_counter_Charles = 0 # Used to calculate the percentage of votes Charles won
 vote_counter_Diana = 0 # Used to calculate the percentage of votes Diana won
 vote_counter_Raymon = 0 # Used to calculate the percentage of votes Anthony won

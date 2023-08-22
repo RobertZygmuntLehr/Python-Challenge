@@ -7,7 +7,7 @@ import math
 os.system('clear')
 
 # Declare/Instantiate/Initialize necessary global scope variables
-csv_path = "Resources/budget_data.csv"
+csv_path = "../data/budget_data.csv"
 greatest_Increase_profits = 0
 greatest_Decrease_profits = 0
 index = 0
